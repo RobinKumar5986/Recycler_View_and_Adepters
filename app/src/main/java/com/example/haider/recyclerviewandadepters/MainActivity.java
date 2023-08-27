@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         recyclerView=findViewById(R.id.recContact);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
         for(int i=0;i<names.length;i++){
             data.add(new dataSetter(images[i] ,names[i], number ) );
