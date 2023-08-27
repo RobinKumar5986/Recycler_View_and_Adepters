@@ -1,6 +1,7 @@
 package com.example.haider.recyclerviewandadepters;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         recyclerView=findViewById(R.id.recContact);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,2);
+        recyclerView.setLayoutManager(gridLayoutManager);
         for(int i=0;i<names.length;i++){
             data.add(new dataSetter(images[i] ,names[i], number ) );
         }
